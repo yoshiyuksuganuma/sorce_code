@@ -1,0 +1,132 @@
+@use '../global' as g;
+
+ 
+
+.works-page {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-snap-stop: always;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    &__bl {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    }
+
+    &__tit {
+        text-align: center;
+        font-size: 6.5rem;
+        letter-spacing: 5px;
+        font-weight: bold;
+        margin-bottom: 3%;
+    }
+
+    
+    &__link {
+        color: #fa1818!important;
+    }
+    &__section {
+        scroll-snap-align: start;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        padding: 0 5% ;
+        @include g.sp {
+        transform: none;
+        top: auto;
+        left: auto;
+        position: static;
+        transform: translatey(12%);
+        }
+
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include g.sp {
+        flex-direction: column-reverse;
+        }
+       
+    }
+    &__content {
+        background-color: #080707;
+    }
+
+    &__thum-wrap {
+        width: 50%;
+        border: 1px solid #b0adad;
+        @include g.sp {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    &__list {
+        width: 40%;
+        @include g.sp {
+            width: 100%;
+            margin-top: 8%;
+        }
+        dt {
+            font-size: 3rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background-color: #fff;
+                transform: rotate(45deg);
+                margin-right: 3%;
+            }
+            
+        }
+        dd {
+            font-size: 2.5rem;
+            opacity: .75;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 5%;
+            @include g.sp {
+                font-size: 3rem;
+            }
+            &::before {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 2px;
+                background-color: #fff;
+                margin-right: 3%;
+            }
+
+        }
+       
+    }//list
+    &__desc {
+        font-size: 2rem!important;
+        @include g.sp {
+        font-size: 3rem!important;
+        }
+        &::before {
+            display: none!important;
+        }
+       
+    }
+
+}
+

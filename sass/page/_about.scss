@@ -1,0 +1,192 @@
+@use '../global' as g;
+
+
+.about-bg {
+    background-color: #212121;
+}
+
+.about__sec-tit {
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #EE6161;
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+    font-size: 6.5rem;
+    letter-spacing: 5px;
+    text-align: left;
+    &:after {
+    content: "";
+       width: 27.27%;
+       height: 3px;
+       background: #391E88;
+       position: absolute;
+       left: 0;
+       bottom: -3px;
+      
+       }
+}
+
+
+.about-pro {
+    color: #fff;
+    background-color: #212121;
+    padding: 5%;
+    font-size: 2rem;
+    
+
+    &__txt {
+        color: #fff;
+        font-size: 1.7rem;
+        @include g.sp {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    }
+    &__txt-wrap {
+        @include g.sp {
+            margin-top: 7%;
+        }
+    }
+   
+    &__name {
+        font-weight: bold;
+        font-size: 2.9rem;
+        margin-right: 3%;
+        @include g.sp {
+            font-size: 4rem;
+            margin-right: 0;
+            text-align: center;
+        }
+    }
+    &__sub-name {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 2%;
+        display: block;
+        @include g.sp {
+            text-align: center;
+            font-size: 2.4rem;
+        }
+    }
+    &__inner {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include g.sp {
+        display: block;
+        }
+    }
+    &__img-wrap {
+        width: 45%;
+        margin-right: 5%;
+        @include g.sp {
+            margin: 0 auto;
+            width: 70%;
+
+        }
+    }
+}
+
+.skill {
+    color: #fff;
+    padding: 5%;
+   
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      @include g.sp {
+        display: block;
+      }
+    }
+    &__bl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 45%;
+        margin-bottom: 5%;
+        @include g.sp {
+            width: 100%;
+            margin-bottom: 10%;
+        }
+      
+    }
+    &__bl:nth-of-type(9),
+    &__bl:nth-of-type(10) {
+        margin-bottom: 0;
+        @include g.sp {
+            margin-bottom: 10%;
+        }
+    }
+    &__img-wrap {
+        width: 13%;
+    }
+    &__gage {
+
+        width: 83%;
+    }
+    
+    &__year {
+        font-size: 2rem;
+        color: #d1cfcf;
+        @include g.sp {
+            font-size: 2.7rem;
+        }
+    }
+    &__name {
+        font-size: 3.5rem;
+        margin-right: 2%;
+        @include g.sp {
+            font-size: 4.2rem;
+        }
+    }
+    
+}
+
+
+
+.footer-about {
+    padding: 5%;
+
+    &__icon {
+        margin-top: 3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            margin-right: 3%;
+            @include g.sp {
+                margin-right: 8%;
+            }
+        }
+        a:last-of-type {
+            margin: 0;
+        }
+        i {
+            font-size: 3.5rem;
+            @include g.sp {
+                font-size: 5.4rem;
+            }
+        }
+    }
+    &__inner {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+
+    }
+    p {
+        text-align: center;
+        font-size: 3.5rem;
+        @include g.sp {
+            font-size: 4.4rem;
+        }
+    }
+
+}
